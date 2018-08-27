@@ -12,6 +12,10 @@
 <body <?php body_class(); ?>>
 	<header class="sbh_global-header">
 		<div class="sbh_wrap">
-
+			<nav class="sbh_global-nav">
+				<ul>
+					<?php wp_nav_menu( array('theme_location' => 'main_menu' )); ?>
+				</ul>
+			</nav>
 		</div>
 	</header>

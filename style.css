@@ -18,3 +18,24 @@ table{/* tables still need 'cellspacing="0"' in the markup */border-collapse:sep
 blockquote,q{quotes: "" ""}a img{border: 0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block}.clear{clear:both}.clearfix:after{content:".";visibility:hidden;display:block;height:0;
 clear:both}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}strong{font-weight:bold;}em{font-style:italic}del{text-decoration: line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 *, *:after, *:before {box-sizing:border-box;}
+
+
+/* ------------------------------------------------
+ Global
+------------------------------------------------ */
+
+/* ------------------------------------------------
+ Main Nav
+------------------------------------------------ */
+
+.sbh_global-nav ul {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+}
