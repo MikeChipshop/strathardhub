@@ -21,8 +21,22 @@ clear:both}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav
 
 
 /* ------------------------------------------------
+Fonts In Use
+
+font-family: 'Roboto', sans-serif; 400 : 500
+font-family: 'Work Sans', sans-serif;
+------------------------------------------------ */
+
+/* ------------------------------------------------
  Global
 ------------------------------------------------ */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color:#58575E;
+    font-size:18px;
+    font-weight:400;
+}
 
 /* ------------------------------------------------
  Main Nav
