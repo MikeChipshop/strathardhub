@@ -24,7 +24,7 @@ clear:both}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav
 Fonts In Use
 
 font-family: 'Roboto', sans-serif; 400 : 500
-font-family: 'Work Sans', sans-serif;
+font-family: 'Work Sans', sans-serif; 600
 ------------------------------------------------ */
 
 /* ------------------------------------------------
@@ -37,7 +37,55 @@ body {
     font-size:18px;
     font-weight:400;
 }
-
+.sbh_wrap {
+    width:100%;
+    padding:0px 20px;
+    max-width:1100px;
+}
+.sbh_global-logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+.sbh_global-logo span {
+    color:#f0824a;
+}
+.sbh_global-logo a {
+    color:#fff;
+    text-decoration:none;
+}
+.sbh_global-logo svg {
+    max-width:40px;
+    width:100%;
+    height:auto;
+}
+.sbh_global-logo svg .cls-1 {
+    fill: #ffffff;
+}
+.sbh_global-header .sbh_wrap {
+    max-width:100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 10px 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.sbh_fp-hero button {
+    margin-top: 60px;
+    border: none;
+    background-color: #f0824a;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 24px 60px;
+    text-align: center;
+    cursor: pointer;
+}
 /* ------------------------------------------------
  Main Nav
 ------------------------------------------------ */
@@ -50,7 +98,8 @@ body {
     z-index: 99;
 }
 .sbh_global-nav {
-    padding: 10px 0px;
+    font-size: 18px;
+    font-weight:500;
 }
 .sbh_global-nav ul {
     display:-webkit-box;
@@ -65,19 +114,21 @@ body {
 }
 nav.sbh_global-nav li {
     padding: 0px 20px;
-    text-decoration: none;
-    font-size: 20px;
+}
+nav.sbh_global-nav li:first-child {
+    padding-left:0px;
+}
+nav.sbh_global-nav li:last-child {
+    padding-right:0px;
 }
 nav.sbh_global-nav li a {
     text-decoration: none;
     color:#fff;
 }
-nav.sbh_global-nav li.sbh_nav-home a {
-    background: url(img/small-logo.png) no-repeat center center;
-    display: block;
-    height: 20px;
-    width: 29px;
-    text-indent: -999px;
+nav.sbh_global-nav li a:hover,
+nav.sbh_global-nav li.current_page_item a,
+nav.sbh_global-nav li.current-menu-item a {
+    color:#f0824a;
 }
 
 /* ------------------------------------------------
@@ -106,8 +157,62 @@ nav.sbh_global-nav li.sbh_nav-home a {
     height: 100%;
     content: "";
     z-index: 2;
-    opacity: .3;
+    opacity: .5;
 }
 .sbh_fp-hero .sbh_wrap {
     z-index:3;
+    color:#ffffff;
+    text-align:center;
+    max-width: 100%;
+}
+.sbh_fp-hero h2 {
+    padding-bottom: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+}
+.sbh_fp-hero h3 {
+    font-weight:500;
+    font-size:22px;
+    line-height:1.4;
+}
+
+@media only screen and (max-width : 850px) {
+    .sbh_fp-hero h2 {
+        font-size: 60px;
+    }
+    .sbh_fp-hero h3 {
+        font-size:20px;
+    }
+    .sbh_fp-hero button {
+        margin-top:40px;
+        font-size: 20px;
+        padding: 15px 50px;
+    }
+}
+
+@media only screen and (max-width : 750px) {
+    .sbh_global-header .sbh_wrap {
+        display:block;
+    }
+    .sbh_global-logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sbh_global-nav {
+        font-size:16px;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .sbh_fp-hero h2 {
+        font-size: 40px;
+    }
+    .sbh_fp-hero h3 {
+        font-size:18px;
+        font-weight:400;
+    }
+    nav.sbh_global-nav li {
+        padding:0px 10px;
+    }
 }
