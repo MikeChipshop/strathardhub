@@ -8,6 +8,13 @@
 <meta name="msapplication-TileColor" content="#0693cf">
 <meta name="theme-color" content="#0693cf">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="180x180" href="https://strathardhub.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://strathardhub.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://strathardhub.com/favicon-16x16.png">
+<link rel="manifest" href="https://strathardhub.com/site.webmanifest">
+<link rel="mask-icon" href="https://strathardhub.com/safari-pinned-tab.svg" color="#e88742">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

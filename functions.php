@@ -14,6 +14,7 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 
 if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'home-slide', 1400, 400, false );
+	add_image_size( 'testimonial', 150, 150, false );
 }
 
 /****************************************************
@@ -379,4 +380,50 @@ class pb18_article_also_widget extends WP_Widget {
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		return $instance;
 	}
+}
+
+/***************************************************
+/ Testimonails Post Type
+/***************************************************/
+
+add_action( 'init', 'register_cpt_testimonial' );
+
+function register_cpt_testimonial() {
+
+    $labels = array(
+        'name' => _x( 'Testimonials', 'testimonial' ),
+        'singular_name' => _x( 'Testimonial', 'testimonial' ),
+        'add_new' => _x( 'Add New', 'testimonial' ),
+        'add_new_item' => _x( 'Add New', 'testimonial' ),
+        'edit_item' => _x( 'Edit', 'testimonial' ),
+        'new_item' => _x( 'New', 'testimonial' ),
+        'view_item' => _x( 'View', 'testimonial' ),
+        'search_items' => _x( 'Search', 'testimonial' ),
+        'not_found' => _x( 'None found', 'testimonial' ),
+        'not_found_in_trash' => _x( 'None found in bin', 'testimonial' ),
+        'parent_item_colon' => _x( 'Parent:', 'testimonial' ),
+        'menu_name' => _x( 'Testimonials', 'testimonial' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Post type for testimonials',
+        'supports' => array( 'title', 'thumbnail', 'revisions' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 20,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+		'menu_icon' => 'dashicons-megaphone',
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'testimonial', $args );
 }
