@@ -5,7 +5,7 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class('sbh_main-article'); ?>>
                     <header>
                         <h1><?php the_title(); ?></h1>
-                        <h2>Published <time><?php the_time('jS F Y'); ?></time> in <span class="sbh_post-meta-category"><?php the_category( ', ' ); ?></span></h2>
+                        <h2>Published <time><?php the_time('jS F Y'); ?></time> in <span class="sbh_post-meta-category"><?php the_category( ', ' ); ?></span> by <span class="sbh_post-meta-category"><?php the_author(); ?></span></h2>
                     </header>
                     <div class="sbh_article-content rte">
                         <?php the_content(); ?>

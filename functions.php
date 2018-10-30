@@ -1,6 +1,25 @@
 <?php
 
+if ( ! function_exists( 'twentynineteen_setup' ) ) :
+    function twentynineteen_setup() {
+        // Add support for Block Styles
+		add_theme_support( 'wp-block-styles' );
+		// Add support for full and wide align images.
+		add_theme_support( 'align-wide' );
+		// Add support for editor styles
+		add_theme_support( 'editor-styles' );
+		// Enqueue editor styles
+		add_editor_style( 'style-editor.css' );
+    }
+endif;
+
 add_action( 'after_setup_theme', 'twentyten_setup' );
+
+function sbh_guten_block_editor_assets() {
+	wp_enqueue_style('sbh-editor-style', get_stylesheet_directory_uri() . "/style-editor.css", array(),	'1.0');
+    wp_enqueue_style( 'sbh-font-css', 'https://fonts.googleapis.com/css?family=Roboto:400,500|Work+Sans:600','','', 'screen' );
+}
+add_action('enqueue_block_editor_assets', 'sbh_guten_block_editor_assets');
 
 /***************************************************
 / Add Featured Thumbs
