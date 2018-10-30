@@ -468,6 +468,79 @@ div.wpcf7-mail-sent-ok {
 }
 
 /* ------------------------------------------------
+ Single Articles
+------------------------------------------------ */
+
+.single-post .sbh_wrap {
+    margin:0 auto;
+}
+.sbh_main-article {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 100px 20px 0px 20px;
+}
+.sbh_main-article header {
+    padding-bottom:30px;
+}
+.sbh_main-article header h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 32px;
+    padding-bottom: 10px;
+    line-height: 1.1;
+}
+.sbh_main-article header h2 {
+    font-size:16px;
+}
+.sbh_main-article header h2 time,
+.sbh_main-article header h2 a {
+    font-style:italic;
+}
+.sbh_main-article header h2 a:link,
+.sbh_main-article header h2 a:visited,
+.sbh_main-article header h2 a:active {
+    color:#f0824a;
+    text-decoration:none;
+}
+.sbh_main-article header h2 a:hover {
+    color:#58575E;
+}
+
+/* ------------------------------------------------
+ RTE
+------------------------------------------------ */
+
+.rte {
+    line-height:1.4;
+    font-size:16px;
+}
+.rte p {
+    padding-bottom:20px;
+}
+.rte p:last-child {
+    padding-bottom:0px;
+}
+.rte a:link,
+.rte a:visited,
+.rte a:active {
+    color:#f0824a;
+    text-decoration:none;
+}
+.rte a:hover {
+    color:#58575E;
+}
+.rte blockquote {
+    padding: 5px 5px 5px 20px;
+    border-left: 3px solid #f0824a;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.rte blockquote cite {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+}
+/* ------------------------------------------------
  Global Footer
 ------------------------------------------------ */
 .sbh_global-footer {
