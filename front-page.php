@@ -57,13 +57,20 @@
 		<?php $testimonialloop = new WP_Query( $testimonialargs ); ?>
 		<?php if ( $testimonialloop->have_posts() ): ?>
 			<?php while ( $testimonialloop->have_posts() ) : $testimonialloop->the_post(); ?>
-                <div class="sbh_single-testimonial">
-                    <?php
-                        $attachment_id = get_field('testimonial_image');
-                        $size = "testimonial";
-                        $image = wp_get_attachment_image_src( $attachment_id, $size );
-                    ?>
-                    <figure><img src="<?php echo $image[0]; ?>" alt=""></figure>
+                <div class="
+                    sbh_single-testimonial
+                    <?php if(get_field('testimonial_image')): ?>
+                     has-image
+                    <?php endif; ?>
+                ">
+                    <?php if(get_field('testimonial_image')): ?>
+                        <?php
+                            $attachment_id = get_field('testimonial_image');
+                            $size = "testimonial";
+                            $image = wp_get_attachment_image_src( $attachment_id, $size );
+                        ?>
+                        <figure><img src="<?php echo $image[0]; ?>" alt=""></figure>
+                    <?php endif; ?>
                     <div class="sbh_testimonial-content">
                         <blockquote>
                             <?php the_field('testimonial_quote'); ?>
