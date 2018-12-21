@@ -30,4 +30,18 @@ jQuery(document).ready(function( $ ) {
             }
         });
     });
+
+    $('.sbh_testimonail-slider-item').lightSlider({
+        item:1,
+        loop:true,
+        mode: 'fade',
+        auto: true,
+        slideMove:1,
+        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        speed:800,
+        slideMargin:0,
+        pauseOnHover: true,
+        adaptiveHeight: true,
+        pause: 6000,
+    });
 });

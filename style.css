@@ -332,6 +332,13 @@ nav.sbh_global-nav li.current-menu-item a {
     color: #F0824A;
     text-decoration:none;
 }
+.sbh_fp-testimonials .lSSlideOuter .lSPager.lSpg>li.active a,
+.sbh_fp-testimonials .lSSlideOuter .lSPager.lSpg>li:hover a {
+    background-color: #F0824A;
+}
+.sbh_fp-testimonials .lSSlideOuter .lSPager.lSpg {
+    padding-top:30px;
+}
 
 /* ------------------------------------------------
  FP Contact

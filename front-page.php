@@ -47,15 +47,18 @@
 <section class="sbh_fp-testimonials" id="sbh_testimonials">
     <h1 class="sbh_section-title"><?php the_field('testimonials_section_title'); ?></h1>
     <div class="sbh_wrap">
+
         <?php
 			$testimonialargs = array(
 				'post_type' => 'testimonial',
-                'posts_per_page' => 1,
+                'posts_per_page' => -1,
                 'orderby'   => 'rand'
 			);
 		?>
 		<?php $testimonialloop = new WP_Query( $testimonialargs ); ?>
 		<?php if ( $testimonialloop->have_posts() ): ?>
+            <div class="sbh_testimonail-slider">
+            <div class="sbh_testimonail-slider-item">
 			<?php while ( $testimonialloop->have_posts() ) : $testimonialloop->the_post(); ?>
                 <div class="
                     sbh_single-testimonial
@@ -86,6 +89,8 @@
                     </div>
                 </div>
             <?php endwhile; ?>
+            </div>
+            </div>
         <?php endif; ?>
     </div>
 </section>
