@@ -8,7 +8,10 @@
     <div class="sbh_wrap">
         <h2><?php the_field('hero_call_to_action'); ?></h2>
         <h3><?php the_field('hero_subheading'); ?></h3>
-        <button><?php the_field('hero_button_text'); ?></button>
+        <div class="sbh_hero-actions">
+            <a href="https://strathardhub.com/book">Book Now</a>
+            <button><?php the_field('hero_button_text'); ?></button>
+        </div>
     </div>
 </div>
 <section class="sbh_fp-facilities" id="sbh_facilities">
