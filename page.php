@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+    <?php
+        $attachment_id = get_field('hero_image');
+        $size = "full";
+        $image = wp_get_attachment_image_src( $attachment_id, $size );
+    ?>
+    <div class="sbh_fp-hero" style="background:url('<?php echo $image[0]; ?>') no-repeat center center;background-size:cover;">
+        <div class="sbh_wrap">
+            <h2><?php the_title(); ?></h2>
+        </div>
+    </div>
     <div class="sbh_wrap">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
