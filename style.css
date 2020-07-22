@@ -82,6 +82,9 @@ h1.sbh_section-title {
     -ms-flex-align: center;
     align-items: center;
 }
+.single-post .sbh_global-header {
+    background-color: #58575E;
+}
 .sbh_hero-actions {
     padding-top:60px;
 }
@@ -229,6 +232,36 @@ nav.sbh_global-nav li.current-menu-item a {
     font-weight:500;
 }
 
+/* ------------------------------------------------
+ FP Welcome
+------------------------------------------------ */
+.sbh_fp-welcome {
+    padding: 160px 0px 100px 0px;
+    background-color: #f0824a;
+    color: #fff;
+}
+.sbh_fp-welcome-wrap {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0px 20px;k
+}
+.sbh_fp-welcome h1.sbh_section-title {
+    text-align: left;
+    width: 100%;
+    max-width: 900px;
+    margin: 0px auto 40px auto;
+    padding: 0px 20px;
+}
+.sbh_fp-welcome-wrap.rte a:link,
+.sbh_fp-welcome-wrap.rte a:visited,
+.sbh_fp-welcome-wrap.rte a:active {
+    color:#fff;
+    text-decoration:underline;
+}
+.sbh_fp-welcome-wrap.rte a:hover {
+    color:#e5e5e5;
+}
 /* ------------------------------------------------
  FP Facilities
 ------------------------------------------------ */
@@ -608,7 +641,7 @@ article.page {
     max-width: 800px;
     margin: 0 auto;
     width: 100%;
-    padding: 100px 20px 0px 20px;
+    padding: 100px 20px 80px 20px;
 }
 .sbh_main-article header {
     padding-bottom:30px;
@@ -641,14 +674,14 @@ article.page {
 ------------------------------------------------ */
 
 .rte {
-    line-height:1.4;
+    line-height:1.5;
     font-size:16px;
 }
 .rte p {
-    padding-bottom:20px;
+    margin-bottom:20px;
 }
 .rte p:last-child {
-    padding-bottom:0px;
+    margin-bottom:0px;
 }
 .rte a:link,
 .rte a:visited,
@@ -670,6 +703,42 @@ article.page {
     font-weight: 500;
     font-size: 14px;
 }
+.rte ul, 
+.rte ol{
+    margin-bottom: 20px;
+}
+.rte li {
+    padding-bottom:6px;
+}
+.rte li:last-child {
+    padding-bottom:0px;
+}
+.rte h2,
+.rte h3,
+.rte h4,
+.rte h5 {
+    font-weight: bold;
+}
+.rte h1 {
+    font-size: 28px;
+    padding: 20px 0px 20px 0px;
+    letter-spacing: 1px;
+}
+.rte h2 {
+    padding: 20px 0px 20px 0px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+.rte h3 {
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.rte h4 {
+    padding: 0px 0px;
+    font-size: 18px;
+}
+
 /* ------------------------------------------------
  Global Footer
 ------------------------------------------------ */

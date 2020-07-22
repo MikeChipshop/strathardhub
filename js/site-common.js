@@ -13,7 +13,7 @@ jQuery(document).ready(function( $ ) {
 
     $(".sbh_fp-hero button").click(function() {
         $([document.documentElement, document.body]).animate({
-            scrollTop: $("#sbh_facilities").offset().top
+            scrollTop: $("#sbh_welcome").offset().top
         }, 500);
     });
 

@@ -14,6 +14,15 @@
         </div>
     </div>
 </div>
+<section class="sbh_fp-welcome" id="sbh_welcome">
+    <h1 class="sbh_section-title">Covid-19 Update</h1>
+    <div class="sbh_fp-welcome-wrap rte">
+       <p><strong>Thank you for continuing to support your Business Hub</strong></p>
+       <p>To keep everyone safe as Covid-19 restrictions are eased we have made several changes in how we operate the Strathard Business Hub. These include a strict booking system for desks, minimising the amount of desk space available and sanitisation stations as well as other changes.</p>
+       <p>To find out more about the changes, and how to <strong>book a desk</strong>, please <a href="<?php bloginfo('url'); ?>/july-covid-19-procedures/">visit this update</a>.</p>
+       </p>
+    </div>
+</section>
 <section class="sbh_fp-facilities" id="sbh_facilities">
     <h1 class="sbh_section-title"><?php the_field('facilities_section_title'); ?></h1>
     <div class="sbh_fp-facilities-wrap">
