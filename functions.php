@@ -59,6 +59,12 @@ function les_load_scripts() {
 
 add_action('wp_enqueue_scripts', 'les_load_scripts');
 
+function sbh_block_styles() {
+	wp_enqueue_style( 'prox-ed', 'https://fonts.googleapis.com/css?family=Roboto:400,500|Work+Sans:600','','', 'screen' );
+	wp_enqueue_style( 'acf-font', get_template_directory_uri() . '/css/acf-styles.css');
+}
+add_action( 'enqueue_block_editor_assets', 'sbh_block_styles' );
+
 
 /****************************************************
 EXCERPTS
@@ -453,3 +459,51 @@ function register_cpt_testimonial() {
 
     register_post_type( 'testimonial', $args );
 }
+
+/***************************************************
+/ ACF Blocks
+/***************************************************/
+
+function sbh_block_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'sbh',
+				'title' => __( 'Business Hub', 'sbh' ),
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'sbh_block_category', 10, 2);
+
+
+function register_acf_block_types() {
+
+	// Typographic Display
+	acf_register_block_type(array(
+        'name'              => 'sbh_type',
+        'title'             => __('Type'),
+		'description'       => __('A custom type block for SBH.'),
+		'mode'			=> 'preview',
+		'render_template'   => 'blocks/type/type.php',
+		'enqueue_style' => get_template_directory_uri() . '/blocks/type/type.css',
+		'enqueue_script' => get_template_directory_uri() . '/blocks/type/type.js',
+        'category'          => 'sbh',
+        'icon'              => 'editor-textcolor',
+		'keywords'          => array( 'layout', 'SBH', 'custom' ),
+		'supports' => array( 
+			'align' => false,
+			'jsx' 	=> true,
+		 ),
+	));	
+}
+
+if( function_exists('acf_register_block_type') ) {
+    add_action('acf/init', 'register_acf_block_types');
+}
+
+add_filter( 'big_image_size_threshold', '__return_false' );
+
+add_theme_support('editor-styles');
+add_editor_style( 'editor-style.css' );
