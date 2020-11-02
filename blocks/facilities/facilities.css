@@ -1,0 +1,46 @@
+.sbh_fp-facilities {
+    padding:160px 0px 100px 0px;
+}
+.sbh_fp-facilities h1.sbh_section-title {
+    text-align:center;
+}
+.sbh_fp-facilities-wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    text-align: center;
+}
+.sbh_fp-facilities-wrap ul,
+.editor-styles-wrapper .sbh_fp-facilities-wrap ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style-type:none;
+}
+.sbh_fp-facilities-wrap li {
+    -ms-flex-preferred-size: 33.333%;
+    flex-basis: 33.333%;
+    padding: 20px 20px 60px 20px;
+    line-height:1.4;
+}
+.sbh_fp-facilities-fig {
+    font-size: 60px;
+    color: #f0824a;
+    padding-bottom: 10px;
+}
+.sbh_fp-facilities-fig svg {
+    height:60px;
+}
+.sbh_fp-facilities-wrap h2 {
+    font-weight: 500;
+    font-size: 24px;
+    padding-bottom:10px;
+}

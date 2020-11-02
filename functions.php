@@ -497,6 +497,61 @@ function register_acf_block_types() {
 			'jsx' 	=> true,
 		 ),
 	));	
+
+	// Testimonials
+	acf_register_block_type(array(
+        'name'              => 'sbh_testimonials',
+        'title'             => __('Testimonials'),
+		'description'       => __('A custom type block for testimonials.'),
+		'mode'			=> 'preview',
+		'render_template'   => 'blocks/testimonials/testimonials.php',
+		'enqueue_style' => get_template_directory_uri() . '/blocks/testimonials/testimonials.css',
+		'enqueue_script' => get_template_directory_uri() . '/blocks/testimonials/testimonials.js',
+        'category'          => 'sbh',
+        'icon'              => 'format-status',
+		'keywords'          => array( 'layout', 'SBH', 'testimonials' ),
+		'supports' => array( 
+			'align' => false,
+			'jsx' 	=> true,
+			'multiple' => false,
+		 ),
+	));	
+
+	// Facilities
+	acf_register_block_type(array(
+        'name'              => 'sbh_facilities',
+        'title'             => __('Facilities'),
+		'description'       => __('A custom type block for facilities.'),
+		'mode'			=> 'preview',
+		'render_template'   => 'blocks/facilities/facilities.php',
+		'enqueue_style' => get_template_directory_uri() . '/blocks/facilities/facilities.css',
+		'enqueue_script' => get_template_directory_uri() . '/blocks/facilities/facilities.js',
+        'category'          => 'sbh',
+        'icon'              => 'clipboard',
+		'keywords'          => array( 'layout', 'SBH', 'facilities' ),
+		'supports' => array( 
+			'align' => false,
+			'jsx' 	=> true,
+		 ),
+	));	
+
+	// Two Column
+	acf_register_block_type(array(
+        'name'              => 'sbh_two-column',
+        'title'             => __('Two Columns'),
+		'description'       => __('A custom Two Column block.'),
+		'mode'			=> 'preview',
+		'render_template'   => 'blocks/two-column/two-column.php',
+		'enqueue_style' => get_template_directory_uri() . '/blocks/two-column/two-column.css',
+		'enqueue_script' => get_template_directory_uri() . '/blocks/two-column/two-column.js',
+        'category'          => 'sbh',
+        'icon'              => 'columns',
+		'keywords'          => array( 'layout', 'SBH', 'two-column', 'Two Column' ),
+		'supports' => array( 
+			'align' => false,
+			'jsx' 	=> true,
+		 ),
+	));	
 }
 
 if( function_exists('acf_register_block_type') ) {
@@ -507,3 +562,7 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 
 add_theme_support('editor-styles');
 add_editor_style( 'editor-style.css' );
+
+if(function_exists('acf_add_options_page')) {
+	acf_add_options_page();
+}
