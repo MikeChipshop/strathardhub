@@ -16,7 +16,7 @@
     }
 ?>
 
-<section id="<?php echo esc_attr($id); ?> sbh_facilities" class="<?php echo esc_attr($className); ?> sbh_block-facilities sbh_fp-facilities">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> sbh_block-facilities sbh_fp-facilities">
     <h1 class="sbh_section-title"><?php the_field('facilities_section_title','option'); ?></h1>
     <div class="sbh_fp-facilities-wrap">
         <ul>

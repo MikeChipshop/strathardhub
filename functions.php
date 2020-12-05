@@ -461,6 +461,53 @@ function register_cpt_testimonial() {
 }
 
 /***************************************************
+/ Facilities Post Type
+/***************************************************/
+
+add_action( 'init', 'register_cpt_facility' );
+
+function register_cpt_facility() {
+
+    $labels = array(
+        'name' => _x( 'Facilities', 'facility' ),
+        'singular_name' => _x( 'Facility', 'facility' ),
+        'add_new' => _x( 'Add New', 'facility' ),
+        'add_new_item' => _x( 'Add New', 'facility' ),
+        'edit_item' => _x( 'Edit', 'facility' ),
+        'new_item' => _x( 'New', 'facility' ),
+        'view_item' => _x( 'View', 'facility' ),
+        'search_items' => _x( 'Search', 'facility' ),
+        'not_found' => _x( 'None found', 'facility' ),
+        'not_found_in_trash' => _x( 'None found in bin', 'facility' ),
+        'parent_item_colon' => _x( 'Parent:', 'facility' ),
+        'menu_name' => _x( 'Facilities', 'facility' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Post type for facilities',
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 20,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+		'menu_icon' => 'dashicons-clipboard',
+		'capability_type' => 'post',
+		'show_in_rest' => true
+    );
+
+    register_post_type( 'facility', $args );
+}
+
+/***************************************************
 / ACF Blocks
 /***************************************************/
 

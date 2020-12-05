@@ -16,7 +16,7 @@
     }
 ?>
 
-<section id="<?php echo esc_attr($id); ?> sbh_about" class="<?php echo esc_attr($className); ?> sbh_block-two-column sbh_fp-about">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> sbh_block-two-column sbh_fp-about">
     <div class="sbh_fp-about-content">
         <div class="sbh_fp-about-content-wrap">
             <h1><?php the_field('two_column_title'); ?></h1>

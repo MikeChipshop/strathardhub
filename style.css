@@ -83,7 +83,7 @@ h1.sbh_section-title {
     align-items: center;
 }
 .single-post .sbh_global-header {
-    background-color: #58575E;
+    background-color: #313033;
 }
 .sbh_hero-actions {
     padding-top:60px;
@@ -138,7 +138,7 @@ h1.sbh_section-title {
     transition: background-color .5s;
 }
 .sbh_global-header.darkHeader {
-    background-color:#58575E;
+    background-color:#313033;
     -webkit-box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.18);
     -moz-box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.18);
     box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.18);
@@ -177,7 +177,7 @@ nav.sbh_global-nav li.book a {
 nav.sbh_global-nav li a:hover,
 nav.sbh_global-nav li.current_page_item a,
 nav.sbh_global-nav li.current-menu-item a {
-    color:#f0824a;
+    color:#fff;
 }
 
 /* ------------------------------------------------
@@ -263,13 +263,9 @@ nav.sbh_global-nav li.current-menu-item a {
     color:#e5e5e5;
 }
 
-
-
-
 /* ------------------------------------------------
  FP Testimonial
 ------------------------------------------------ */
-
 .sbh_fp-testimonials {
     padding: 160px 20px;
 }
@@ -335,10 +331,9 @@ nav.sbh_global-nav li.current-menu-item a {
 /* ------------------------------------------------
  FP Contact
 ------------------------------------------------ */
-
 .sbh_fp-contact {
     padding: 160px 20px;
-    background-color: #58575e;
+    background-color: #313033;
     color: #fff;
 }
 .sbh_fp-contact a {
@@ -410,6 +405,7 @@ nav.sbh_global-nav li.current-menu-item a {
 .sbh_contact-social ul li:nth-of-type(3) a {
     color:#21a1f0;
 }
+
 /* Form */
 .sbh_fp-contact-col-two li {
     padding-bottom: 20px;
@@ -481,20 +477,22 @@ div.wpcf7-mail-sent-ok {
     max-width: 1400px;
     margin:0 auto;
 }
-/* Bookings */
 
+/* Bookings */
 .sbh_booking-form {
-    padding-top:20px;
+    width:100%;
+    padding:60px 20px;
+    max-width: 1400px;
+    margin:0 auto;
 }
 .sbh_booking-form iframe {
     width:100%;
-    height:600px;
+    height:800px;
 }
 
 /* ------------------------------------------------
  Article Index
 ------------------------------------------------ */
-
 .sbh_blog-index {
     width: 100%;
     max-width: 1400px;
@@ -550,10 +548,10 @@ div.wpcf7-mail-sent-ok {
     text-decoration:none;
     color:#f0824a;
 }
+
 /* ------------------------------------------------
  Single Articles
 ------------------------------------------------ */
-
 .single-post .sbh_wrap {
     margin:0 auto;
 }
@@ -592,7 +590,6 @@ div.wpcf7-mail-sent-ok {
 /* ------------------------------------------------
  RTE
 ------------------------------------------------ */
-
 .rte {
     line-height:1.5;
     font-size:16px;
@@ -664,7 +661,7 @@ div.wpcf7-mail-sent-ok {
 ------------------------------------------------ */
 .sbh_global-footer {
     color: #ababab;
-    background-color: #28272b;
+    background-color: #313033;
     padding: 20px 20px;
     font-size: 16px;
 }
