@@ -24,19 +24,19 @@
             <div class="sbh_contact-address">
                 <h2>Addresss</h2>
                 <ol itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <li>Strathard Business Hub</li>
-                    <li itemprop="streetAddress">1st Floor, Trossachs Discovery Centre, Main Street</li>
-                    <li itemprop="addressLocality">Aberfoyle</li>
-                    <li itemprop="addressRegion">Stirlingshire</li>
-                    <li itemprop="postalCode">FK8 3UQ</li>
+                    <li><?php the_field('block_contact_address_line_one','option'); ?></li>
+                    <li itemprop="streetAddress"><?php the_field('block_contact_address_line_two','option'); ?></li>
+                    <li itemprop="addressLocality"><?php the_field('block_contact_address_town','option'); ?></li>
+                    <li itemprop="addressRegion"><?php the_field('block_contact_address_region','option'); ?></li>
+                    <li itemprop="postalCode"><?php the_field('block_contact_address_postcode','option'); ?></li>
                 </ol>
             </div>
             <div class="sbh_contact-methods">
                 <h2>Contact Methods</h2>
                 <ul>
-                    <li>Email: <a href="mailto:hello@strathardhub.com">hello@strathardhub.com</a></li>
-                    <li>Tel: <a href="tel:01877382974">01877 382 974</a></li>
-                    <li>Or use the handy contact form provided</li>
+                    <li>Email: <a href="mailto:<?php the_field('block_contact_methods_email','option'); ?>"><?php the_field('block_contact_methods_email','option'); ?></a></li>
+                    <li>Tel: <a href="tel:<?php the_field('block_contact_methods_telephone','option'); ?>"><?php the_field('block_contact_methods_telephone','option'); ?></a></li>
+                    <li><?php the_field('block_contact_methods_further_information','option'); ?></li>
                 </ul>
             </div>
             <div class="sbh_contact-social">
@@ -70,10 +70,9 @@
             </div>
         </div>
         <div class="sbh_fp-contact-col-two">
-            <?php echo do_shortcode('[contact-form-7 id="72" title="Contact Form"]'); ?>
-            <div class="sbh_google-terms">
-                This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.
-            </div>
+            <?php $shortcode = get_field('block_contact_form_embed','option'); ?>
+            <?php echo do_shortcode($shortcode); ?>
+            <div class="sbh_google-terms"><?php the_field('block_contact_form_captcha_notice','option'); ?></div>
         </div>
     </div>
 </section>
