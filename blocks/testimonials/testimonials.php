@@ -17,7 +17,22 @@
 ?>
 
 <?php if(is_admin()): ?>
-    <h1 class="sbh_section-title">Testimonials</h1>
+    <section id="sbh_block-block_5f9febed82d58 sbh_testimonials" class="sbh_block sbh_block-testimonial sbh_fp-testimonials">
+        <h1 class="sbh_section-title">Testimonials</h1>
+        <div class="sbh_wrap">
+            <div class="sbh_testimonail-slider-item">
+                <div class="sbh_single-testimonial">
+                    <div class="sbh_testimonial-content">
+                        <blockquote>
+                            <p>This area here will show a nice revolving gallery of all testimonials that have been published to the Strathard Hub website.</p>
+                            <p>In order to publish (or remove previous) testimonials, go to "Dashboard > Testimonials" where you can choose to edit previous testimonials, remove testimonials from being shown and add new testimonials. You can also choose to display a business logo on the individual testimonials.</p>
+                        </blockquote>
+                        <cite><a href="#">Dexter Morgan – Scarlet Art Ltd</a></cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
 <?php else: ?>
     <section id="<?php echo esc_attr($id); ?> sbh_testimonials" class="<?php echo esc_attr($className); ?> sbh_block-testimonial sbh_fp-testimonials">
         <h1 class="sbh_section-title">Testimonials</h1>
