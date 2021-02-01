@@ -599,6 +599,42 @@ function register_acf_block_types() {
 			'jsx' 	=> true,
 		 ),
 	));	
+
+	// Hero
+	acf_register_block_type(array(
+        'name'              => 'sbh_hero',
+        'title'             => __('Hero'),
+		'description'       => __('A custom Hero block.'),
+		'mode'			=> 'preview',
+		'render_template'   => 'blocks/hero/hero.php',
+		'enqueue_style' => get_template_directory_uri() . '/blocks/hero/hero.css',
+		'enqueue_script' => get_template_directory_uri() . '/blocks/hero/hero.js',
+        'category'          => 'sbh',
+        'icon'              => 'superhero-alt',
+		'keywords'          => array( 'layout', 'SBH','Hero' ),
+		'supports' => array( 
+			'align' => false,
+			'jsx' 	=> true,
+		 ),
+	));	
+
+	// Contact
+	acf_register_block_type(array(
+        'name'              => 'sbh_contact',
+        'title'             => __('Contact'),
+		'description'       => __('A custom contact block.'),
+		'mode'			=> 'preview',
+		'render_template'   => 'blocks/contact/contact.php',
+		'enqueue_style' => get_template_directory_uri() . '/blocks/contact/contact.css',
+		'enqueue_script' => get_template_directory_uri() . '/blocks/contact/contact.js',
+        'category'          => 'sbh',
+        'icon'              => 'email-alt',
+		'keywords'          => array( 'layout', 'SBH','contact' ),
+		'supports' => array( 
+			'align' => false,
+			'jsx' 	=> true,
+		 ),
+	));	
 }
 
 if( function_exists('acf_register_block_type') ) {
