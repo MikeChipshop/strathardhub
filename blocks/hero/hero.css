@@ -45,11 +45,11 @@
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    height:30vh;
+    height:40vh;
     position: relative;
 }
 .home .sbh_fp-hero {
-    height:100vh;
+    height:90vh;
 }
 .sbh_fp-hero::before {
     background-color: #000;
@@ -70,17 +70,21 @@
     padding-bottom: 20px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
-    font-size: 80px;
+    font-size: 60px;
 }
 .sbh_fp-hero h3 {
     font-weight:500;
     font-size:22px;
     line-height:1.4;
 }
+
 .page .sbh_fp-hero h1{
     font-family: 'Work Sans', sans-serif;
     font-size: 38px;
     font-weight:500;
+}
+.home .sbh_fp-hero h2 {
+    font-size: 80px;
 }
 
 @media only screen and (max-width : 850px) {
