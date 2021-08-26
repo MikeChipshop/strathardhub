@@ -13,7 +13,6 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
     }
 endif;
 
-add_action( 'after_setup_theme', 'twentyten_setup' );
 
 function sbh_guten_block_editor_assets() {
 	wp_enqueue_style('sbh-editor-style', get_stylesheet_directory_uri() . "/style-editor.css", array(),	'1.0');
@@ -630,6 +629,23 @@ function register_acf_block_types() {
         'category'          => 'sbh',
         'icon'              => 'email-alt',
 		'keywords'          => array( 'layout', 'SBH','contact' ),
+		'supports' => array( 
+			'align' => false,
+			'jsx' 	=> true,
+		 ),
+	));	
+
+	// Booking
+	acf_register_block_type(array(
+        'name'              => 'sbh_booking',
+        'title'             => __('Booking'),
+		'description'       => __('A custom booking block.'),
+		'mode'			=> 'preview',
+		'render_template'   => 'blocks/booking/booking.php',
+		'enqueue_style' => get_template_directory_uri() . '/blocks/booking/booking.css',
+        'category'          => 'sbh',
+        'icon'              => 'calendar-alt',
+		'keywords'          => array( 'layout', 'SBH','booking' ),
 		'supports' => array( 
 			'align' => false,
 			'jsx' 	=> true,

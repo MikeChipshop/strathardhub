@@ -1,0 +1,10 @@
+.sbh_booking-form {
+    width:100%;
+    padding:60px 20px;
+    max-width: 1400px;
+    margin:0 auto;
+}
+.sbh_booking-form iframe {
+    width:100%;
+    height:800px;
+}

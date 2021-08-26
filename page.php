@@ -5,10 +5,5 @@
                 <?php the_content(); ?>           
             <?php endwhile; ?>
         <?php endif; ?>
-        <?php if(is_page('book')):?>
-            <div class="sbh_booking-form">
-                <iframe src="https://strathardhub.skedda.com/booking?embedded=true"></iframe>
-            </div>
-        <?php endif; ?>
     </main>
 <?php get_footer(); ?>
