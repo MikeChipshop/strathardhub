@@ -507,6 +507,53 @@ function register_cpt_facility() {
 }
 
 /***************************************************
+/ Events Post Type
+/***************************************************/
+
+add_action( 'init', 'register_cpt_events' );
+
+function register_cpt_events() {
+
+    $labels = array(
+        'name' => _x( 'Events', 'events' ),
+        'singular_name' => _x( 'Event', 'events' ),
+        'add_new' => _x( 'Add New', 'events' ),
+        'add_new_item' => _x( 'Add New', 'events' ),
+        'edit_item' => _x( 'Edit', 'events' ),
+        'new_item' => _x( 'New', 'events' ),
+        'view_item' => _x( 'View', 'events' ),
+        'search_items' => _x( 'Search', 'events' ),
+        'not_found' => _x( 'None found', 'events' ),
+        'not_found_in_trash' => _x( 'None found in bin', 'events' ),
+        'parent_item_colon' => _x( 'Parent:', 'facileventsity' ),
+        'menu_name' => _x( 'Events', 'events' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Post type for events',
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 20,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+		'menu_icon' => 'dashicons-clipboard',
+		'capability_type' => 'post',
+		'show_in_rest' => true
+    );
+
+    register_post_type( 'events', $args );
+}
+
+/***************************************************
 / ACF Blocks
 /***************************************************/
 

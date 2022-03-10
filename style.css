@@ -82,7 +82,9 @@ h1.sbh_section-title {
     -ms-flex-align: center;
     align-items: center;
 }
-.single-post .sbh_global-header {
+.single-post .sbh_global-header,
+.single-events .sbh_global-header,
+.post-type-archive-events .sbh_global-header {
     background-color: #313033;
 }
 
@@ -430,10 +432,6 @@ div.wpcf7-mail-sent-ok {
     width: 100%;
 }
 .sbh_excerpt {
-    -webkit-box-flex:1;
-    -ms-flex:1;
-    flex:1;
-    padding-left:30px;
     font-size:16px;
 }
 .sbh_blog-index-list article h1 {
@@ -485,6 +483,32 @@ div.wpcf7-mail-sent-ok {
 }
 .sbh_main-article header h2 a:hover {
     color:#58575E;
+}
+
+
+/* ------------------------------------------------
+ Events
+------------------------------------------------ */
+
+.sbh_events-archive-list ul {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.sbh_excerpt h1 {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+.sbh_excerpt h2 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 20px;
 }
 
 /* ------------------------------------------------
