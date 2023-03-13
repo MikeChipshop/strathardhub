@@ -44,4 +44,9 @@ jQuery(document).ready(function( $ ) {
         adaptiveHeight: true,
         pause: 6000,
     });
+
+    // Toggle Mobile Menu
+    $("button.sbh_mobile-menu-toggle").click(function() { 
+        $("body").toggleClass("sbh_mobile-menu-open");
+    }); 
 });

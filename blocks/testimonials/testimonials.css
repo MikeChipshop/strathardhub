@@ -53,18 +53,31 @@
     padding-left:0px;
 }
 .sbh_testimonial-content cite {
-    color: #F0824A;
+    color: var(--brand-1);
     font-style: italic;
     font-size: 22px;
 }
 .sbh_testimonial-content cite a {
-    color: #F0824A;
+    color: var(--brand-1);
     text-decoration:none;
 }
 .sbh_fp-testimonials .lSSlideOuter .lSPager.lSpg>li.active a,
 .sbh_fp-testimonials .lSSlideOuter .lSPager.lSpg>li:hover a {
-    background-color: #F0824A;
+    background-color: var(--brand-1);
 }
 .sbh_fp-testimonials .lSSlideOuter .lSPager.lSpg {
     padding-top:30px;
+}
+
+@media only screen and (max-width : 600px) {
+    .sbh_single-testimonial {
+        display: block;
+    }
+    .sbh_fp-testimonials figure {
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+    .sbh_testimonial-content {
+        padding-left:0px;
+    }
 }

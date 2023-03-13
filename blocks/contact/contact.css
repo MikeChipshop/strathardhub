@@ -1,7 +1,7 @@
 .sbh_fp-contact {
     padding: 160px 20px;
     background-color: #313033;
-    color: #fff;
+    color: var(--light);
 }
 .editor-styles-wrapper .sbh_fp-contact-col-one p,
 .editor-styles-wrapper .sbh_fp-contact-col-two p {
@@ -17,7 +17,7 @@
 }
 .sbh_fp-contact a {
     text-decoration:none;
-    color:#F0824A;
+    color:var(--brand-1);
 }
 .sbh_fp-contact a:hover {
     text-decoration:underline;
@@ -113,7 +113,7 @@
     border: none;
     width: 100%;
     padding: 10px 5px;
-    background-color: #ffffff;
+    background-color: var(--light);
 }
 .sbh_fp-contact-col-two textarea {
     border: none;
@@ -129,8 +129,8 @@
 }
 .sbh_fp-contact-col-two input[type="submit"] {
     border: none;
-    background-color: #f0824a;
-    color: #ffffff;
+    background-color: var(--brand-1);
+    color: var(--light);
     font-weight: 500;
     font-size: 20px;
     padding: 15px 10px;
@@ -160,4 +160,21 @@ div.wpcf7-mail-sent-ok {
     border-top: 4px solid #009406;
     background-color: #f1fff1;
     color: #009406;
+}
+
+@media only screen and (max-width : 600px) {
+    .sbh_fp-contact {
+        padding: 80px 20px;
+    }
+    .sbh_fp-contact .sbh_wrap {
+        display:block;
+    }
+    .sbh_fp-contact-col-one {
+        padding-right: 0px;
+        border-right: 0px solid #616161;
+        padding-bottom:60px;
+    }
+    .sbh_fp-contact-col-two {
+        padding-left: 0px;
+    }
 }

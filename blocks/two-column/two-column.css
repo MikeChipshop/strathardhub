@@ -1,6 +1,6 @@
 .sbh_fp-about {
     background-color: #313033;
-    color: #fff;
+    color: var(--light);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -25,7 +25,7 @@
 .editor-styles-wrapper .sbh_fp-about-content-wrap p {
     padding:0px 0px 20px 0px;
     font-size:18px;
-    color: #fff;
+    color: var(--light);
     margin:0;
 }
 .sbh_fp-about-content-wrap p:last-child {
@@ -35,4 +35,21 @@
     margin-bottom: 20px;
     font-family: 'Work Sans', sans-serif;
     font-size: 38px;
+}
+
+@media only screen and (max-width : 600px) {
+    .sbh_fp-about {
+        display: block;
+    }
+    .sbh_fp-about-content-wrap {
+        float:none;
+        max-width:100%;
+        width:100%;
+    }
+    .sbh_fp-about-image {
+        padding-bottom: 100%;
+    }
+    .sbh_fp-about-content {
+        padding: 80px 20px 80px 20px;
+    }
 }

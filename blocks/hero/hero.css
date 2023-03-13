@@ -2,9 +2,9 @@
     padding-top:60px;
 }
 .sbh_fp-hero button {
-    border: 2px solid #f0824a;
+    border: 2px solid var(--brand-1);
     background-color: transparent;
-    color: #f0824a;
+    color: var(--brand-1);
     font-weight: 500;
     font-size: 20px;
     padding: 18px 56px;
@@ -12,28 +12,32 @@
     cursor: pointer;
     display:inline-block;
     margin-left:10px;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
 .sbh_fp-hero button:hover {
-    background-color: #f0824a;
-    color: #fff;
+    background-color: var(--brand-1);
+    color: var(--light);
 }
 .sbh_hero-actions a {
     text-decoration:none;
     display:inline-block;
-    border: 2px solid #f0824a;
-    background-color: #f0824a;
-    color: #ffffff;
+    border: 2px solid var(--brand-1);
+    background-color: var(--brand-1);
+    color: var(--light);
     font-weight: 500;
     font-size: 20px;
     padding: 20px 56px;
     text-align: center;
     cursor: pointer;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
 .sbh_hero-actions a:hover {
     background-color: transparent;
-    color: #f0824a;
+    color: var(--brand-1);
 }
 .sbh_fp-hero {
     display:-webkit-box;
@@ -62,15 +66,15 @@
 }
 .sbh_fp-hero .sbh_wrap {
     z-index:3;
-    color:#ffffff;
+    color:var(--light);
     text-align:center;
-    max-width: 100%;
+    max-width: 800px;
 }
 .sbh_fp-hero h2 {
-    padding-bottom: 20px;
+    padding: 76px 20px 20px 20px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
-    font-size: 60px;
+    font-size: 50px;
 }
 .sbh_fp-hero h3 {
     font-weight:500;
@@ -100,6 +104,9 @@
     .page .sbh_fp-hero h1{
         font-size: 32px;
         padding-top:20px;
+    }
+    .home .sbh_fp-hero h2 {
+        font-size: 40px;
     }
 }
 @media only screen and (max-width : 480px) {
