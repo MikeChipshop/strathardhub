@@ -525,7 +525,7 @@ function register_cpt_events() {
         'search_items' => _x( 'Search', 'events' ),
         'not_found' => _x( 'None found', 'events' ),
         'not_found_in_trash' => _x( 'None found in bin', 'events' ),
-        'parent_item_colon' => _x( 'Parent:', 'facileventsity' ),
+        'parent_item_colon' => _x( 'Parent:', 'events' ),
         'menu_name' => _x( 'Events', 'events' ),
     );
 
@@ -552,6 +552,86 @@ function register_cpt_events() {
 
     register_post_type( 'events', $args );
 }
+
+/***************************************************
+/ Directory Post Type
+/***************************************************/
+
+add_action( 'init', 'register_cpt_directory' );
+
+function register_cpt_directory() {
+
+    $labels = array(
+        'name' => _x( 'Directory', 'directory' ),
+        'singular_name' => _x( 'Directory', 'directory' ),
+        'add_new' => _x( 'Add New', 'directory' ),
+        'add_new_item' => _x( 'Add New', 'directory' ),
+        'edit_item' => _x( 'Edit', 'directory' ),
+        'new_item' => _x( 'New', 'directory' ),
+        'view_item' => _x( 'View', 'directory' ),
+        'search_items' => _x( 'Search', 'directory' ),
+        'not_found' => _x( 'None found', 'directory' ),
+        'not_found_in_trash' => _x( 'None found in bin', 'directory' ),
+        'parent_item_colon' => _x( 'Parent:', 'directory' ),
+        'menu_name' => _x( 'Directory', 'directory' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Post type for directory',
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+        'taxonomies' => array('business-category'),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 20,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+		'menu_icon' => 'dashicons-clipboard',
+		'capability_type' => 'post',
+		'show_in_rest' => true
+    );
+
+    register_post_type( 'directory', $args );
+}
+
+/***************************************************
+/ Directory "Business Type" Taxonomy
+/***************************************************/
+
+function sbh_business_category_taxonomy() {
+	$labels = array(
+		'name' => _x( 'Business Category', 'taxonomy general name' ),
+		'singular_name' => _x( 'Business Category', 'taxonomy singular name' ),
+		'search_items' =>  __( 'Search' ),
+		'all_items' => __( 'All Business Categories' ),
+		'parent_item' => __( 'Parent Business Category' ),
+		'parent_item_colon' => __( 'Parent Business Category:' ),
+		'edit_item' => __( 'Edit Business Category' ),
+		'update_item' => __( 'Update Business Category' ),
+		'add_new_item' => __( 'Add New Business Category' ),
+		'new_item_name' => __( 'New Business Category Name' ),
+		'menu_name' => __( 'Business Category' ),
+	);
+
+	// Now register the taxonomy
+	register_taxonomy('business-category', array('directory'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+        'show_in_nav_menus' => true,
+        'show_in_rest' => true,
+        'exclude_from_search' => false
+	));
+}
+add_action('init', 'sbh_business_category_taxonomy', 0);
 
 /***************************************************
 / ACF Blocks
