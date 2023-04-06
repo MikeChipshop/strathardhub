@@ -1,5 +1,8 @@
 <?php get_header(); ?>
     <div class="sbh_wrap">
+        <div class="sbh_list-now">
+            <a href="#">List your business now</a>
+        </div>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('sbh_single-listing'); ?>>
@@ -8,8 +11,7 @@
                             <figure>
                                 <?php the_post_thumbnail(); ?>
                             </figure>                            
-                        <?php endif; ?>
-                        <h1><?php the_title(); ?></h1>
+                        <?php endif; ?>                        
                         <div class="sbh_single-listing-meta location">
                             <h2>Location</h2>
                             <ul>
@@ -57,33 +59,30 @@
                     </aside>
                     <main>
                         <div class="sbh_single-listing-content">
+                            <h1><?php the_title(); ?></h1>
                             <div class="sbh_single-listing-description rte">
                                 <?php the_content(); ?>
                             </div>
-                            <div class="sbh_single-listing-gallery">
-                                <ul>
-                                    <li>
-                                        <figure>
-                                            <img src="#" alt="">
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <img src="#" alt="">
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <img src="#" alt="">
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <img src="#" alt="">
-                                        </figure>
-                                    </li>
-                                </ul>
-                            </div>
+                            <?php if(get_field('directory_listing_gallery')): ?>
+                                <div class="sbh_single-listing-gallery">
+                                    <?php 
+                                        $galleryimages = get_field('directory_listing_gallery');
+                                        $gallerysize = 'listing-gallery';
+                                        $fullgallerysize = 'full';
+                                    ?>
+                                    <?php if( $galleryimages ): ?>
+                                        <ul>
+                                            <?php foreach( $galleryimages as $image_id ): ?>
+                                                <li>
+                                                    <a href="<?php echo wp_get_attachment_image_url( $image_id, $fullgallerysize ); ?>" alt="Gallery Image" target="_blank">
+                                                        <?php echo wp_get_attachment_image( $image_id, $gallerysize ); ?>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </main>
                 </article>

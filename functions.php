@@ -34,6 +34,7 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'home-slide', 1400, 400, false );
 	add_image_size( 'testimonial', 150, 150, false );
+	add_image_size( 'listing-gallery', 200, 200, true );
 }
 
 /****************************************************
@@ -791,4 +792,11 @@ add_editor_style( 'editor-style.css' );
 
 if(function_exists('acf_add_options_page')) {
 	acf_add_options_page();
+}
+
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+function my_acf_google_map_api( $args ) {
+    $args['key'] = 'AIzaSyCbcAWwfsnrtPJflT9Vya-vNCDtlpubuac';
+    return $args;
 }
