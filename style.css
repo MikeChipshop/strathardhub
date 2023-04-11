@@ -575,7 +575,9 @@ div.wpcf7-mail-sent-ok {
     margin-top:20px
 }
 .sbh_list-now a {
-    display:block;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
     color:var(--light);
     text-decoration:none;
     background-color: var(--brand-1);
@@ -583,9 +585,17 @@ div.wpcf7-mail-sent-ok {
     -webkit-transition:all .3s ease;
     -o-transition:all .3s ease;
     transition:all .3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 .sbh_list-now a:hover {
     background-color: var(--brand-2);
+}
+.sbh_list-now a svg {
+    height:16px;
+}
+.sbh_list-now a svg path {
+    fill:var(--light);
 }
 .sbh_single-listing {
     display: -webkit-box;
@@ -607,6 +617,17 @@ div.wpcf7-mail-sent-ok {
 .sbh_single-listing aside a:hover {
     color:var(--brand-2);
 }
+.sbh_single-listing aside a.visit-site {
+    color: var(--light);
+    display: block;
+    background-color: var(--brand-1);
+    text-align: center;
+    padding: 10px;
+    transition:background-color .3s ease;
+}
+.sbh_single-listing aside a.visit-site:hover {
+    background-color: var(--brand-2);
+}
 .sbh_single-listing figure {
     width:160px;
     height:160px;
@@ -625,6 +646,9 @@ div.wpcf7-mail-sent-ok {
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #e7e7e7;
+}
+.sbh_single-listing-meta:last-child {
+    border-bottom: 0px solid #e7e7e7;
 }
 .sbh_single-listing-content {
     padding: 80px 20px 40px 40px;
@@ -649,6 +673,9 @@ div.wpcf7-mail-sent-ok {
     width: 100%;
     max-width: 100%;
     height: auto;
+}
+.sbh_single-listing-meta li {
+    margin-bottom: 10px;
 }
 .sbh_single-listing-social ul {
     display:-webkit-box;
@@ -675,7 +702,10 @@ div.wpcf7-mail-sent-ok {
     width: 32px;
     border-radius:50%;
     margin-right:10px;
-    margin-bottom:10px;
+    transition:background-color .3s ease;
+}
+.sbh_single-listing-social a:hover {
+    background-color:var(--brand-2);
 }
 .sbh_single-listing-social svg {
     height: 20px;
