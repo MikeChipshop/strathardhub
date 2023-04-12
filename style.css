@@ -102,7 +102,8 @@ h1.sbh_section-title {
 .single-post .sbh_global-header,
 .single-events .sbh_global-header,
 .post-type-archive-events .sbh_global-header,
-.single-directory .sbh_global-header {
+.single-directory .sbh_global-header, 
+.page-business-directory .sbh_global-header {
     background-color: #313033;
 }
 button.sbh_mobile-menu-toggle {
@@ -548,6 +549,10 @@ div.wpcf7-mail-sent-ok {
     margin: 0 auto;
     padding: 60px 20px;
 }
+ul.sbh_business-directory-archive-list li {
+    padding-bottom: 44px;
+    position:relative;
+}
 .sbh_excerpt h1 {
     font-size: 20px;
     font-weight: 500;
@@ -559,9 +564,46 @@ div.wpcf7-mail-sent-ok {
     font-weight: 500;
     padding-bottom: 20px;
 }
+a.sbh_view-listing {
+    color: var(--light)!important;
+    background-color: var(--brand-1);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    transition:background-color .3s ease;
+}
+a.sbh_view-listing:hover {
+    background-color: var(--brand-2);
+}
 
 /* ------------------------------------------------
- Directory Listing (Single)
+ Directory Index
+------------------------------------------------ */
+main.sbh_business-directory .sbh_wrap {
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.sbh_business-directory-archive-list {
+    display:grid;
+    grid-gap:40px;
+    grid-template-columns: repeat(4, 1fr);
+}
+ul.sbh_business-directory-archive-list h2 {
+    font-size: 18px;
+    text-align: center;
+}
+ul.sbh_business-directory-archive-list img {
+    display:block;
+    width:100%;
+    max-width:100%;
+    height:auto;
+}
+/* ------------------------------------------------
+ Directory Listing
 ------------------------------------------------ */
 .single-directory > .sbh_wrap {
     margin: 0 auto;
