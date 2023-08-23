@@ -762,6 +762,115 @@ ul.sbh_business-directory-archive-list img {
 }
 
 /* ------------------------------------------------
+ Member Dashbords
+------------------------------------------------ */
+.sbh23_member-dashboard {
+    max-width:1400px;
+    margin:0 auto;
+    width:100%;
+    padding:120px 20px;
+    display: flex;
+}
+.sbh23_members-dashboard-nav {
+    border-right:1px solid #ccc;
+    margin-right:40px;
+    font-size: 20px;
+    background: #fbfbfb;
+}
+.sbh23_members-dashboard-nav a {
+    display:flex;
+    align-items: center;
+    text-decoration:none;
+    color:var(--dark);
+    padding:16px 40px;
+    background:transparent;
+    transition: all .3s ease;
+}
+.sbh23_members-dashboard-nav a:hover {
+    background:var(--brand-1);
+    color:var(--light);
+}
+.sbh23_members-dashboard-nav a svg {
+    height:24px;
+    width:auto;
+    margin-right:10px;
+}
+.sbh23_members-dashboard-nav a svg path {
+    fill:var(--dark);
+    transition:fill .3s ease;
+}
+.sbh23_members-dashboard-nav a:hover svg path {
+    fill:var(--light);
+}
+.sbh23_members-dashboard-content {
+    flex: 1;
+}
+.sbh23_members-dashboard-announcements-wrap h3 {
+    font-size:20px;
+    font-weight:500;
+    padding-bottom:20px;
+}
+.sbh23_members-dashboard-announcements-date {
+    font-size:16px;
+    padding-bottom:20px;
+    display:flex;
+    align-items: center;
+}
+.sbh23_members-dashboard-announcements-date svg {
+    height:20px;
+    width:auto;
+    margin-right:10px;
+}
+.sbh23_members-dashboard-announcements-excerpt {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.sbh23_members-dashboard-announcements-wrap li.sbh23_members-dashboard-announcement {
+    border: 1px solid #ccc;
+    padding: 10px 10px 40px 40px;
+    margin-bottom:20px;
+}
+.sbh23_members-dashboard-announcements-cat ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sbh23_members-dashboard-announcements-cat li {
+    padding-left:10px;
+}
+.sbh23_members-dashboard-announcements-cat a {
+    border:1px solid #ccc;
+    padding:10px 14px;
+    text-transform:uppercase;
+    font-size:14px;
+    display:block;
+    text-decoration:none;
+    color:var(--dark);
+}
+.sbh_no-announcements-found {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 40px;
+    margin-top: 40px;
+}
+.sbh23_members-dashboard-announcements-excerpt p {
+    padding-bottom:20px;
+}
+.sbh23_members-dashboard-announcements-excerpt p:last-child {
+    padding-bottom:0px;
+}
+.sbh23_members-dashboard-announcements-excerpt .read-more {
+    text-decoration:none;
+    padding-top:20px;
+    color:var(--brand-2);
+}
+.sbh23_members-dashboard-content h2 {
+    font-size:30px;
+    padding-bottom:60px;
+    font-weight:500;
+}
+
+/* ------------------------------------------------
  RTE
 ------------------------------------------------ */
 .rte {

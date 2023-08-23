@@ -602,6 +602,53 @@ function register_cpt_directory() {
 }
 
 /***************************************************
+/ Announcement Post Type
+/***************************************************/
+
+add_action( 'init', 'register_cpt_announcement' );
+
+function register_cpt_announcement() {
+
+    $labels = array(
+        'name' => _x( 'Announcement', 'announcement' ),
+        'singular_name' => _x( 'Announcement', 'announcement' ),
+        'add_new' => _x( 'Add New', 'announcement' ),
+        'add_new_item' => _x( 'Add New', 'announcement' ),
+        'edit_item' => _x( 'Edit', 'announcement' ),
+        'new_item' => _x( 'New', 'announcement' ),
+        'view_item' => _x( 'View', 'announcement' ),
+        'search_items' => _x( 'Search', 'announcement' ),
+        'not_found' => _x( 'None found', 'announcement' ),
+        'not_found_in_trash' => _x( 'None found in bin', 'announcement' ),
+        'parent_item_colon' => _x( 'Parent:', 'announcement' ),
+        'menu_name' => _x( 'Announcements', 'announcement' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Post type for announcements',
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions','excerpt' ),
+        'taxonomies' => array('business-category'),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 20,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+		'menu_icon' => 'dashicons-clipboard',
+		'capability_type' => 'post',
+		'show_in_rest' => true
+    );
+
+    register_post_type( 'announcement', $args );
+}
+
+/***************************************************
 / Directory "Business Type" Taxonomy
 /***************************************************/
 
@@ -633,6 +680,39 @@ function sbh_business_category_taxonomy() {
 	));
 }
 add_action('init', 'sbh_business_category_taxonomy', 0);
+
+/***************************************************
+/ Announcement "Announcement Category" Taxonomy
+/***************************************************/
+
+function sbh_announcement_category_taxonomy() {
+	$labels = array(
+		'name' => _x( 'Announcement Category', 'taxonomy general name' ),
+		'singular_name' => _x( 'Announcement Category', 'taxonomy singular name' ),
+		'search_items' =>  __( 'Search' ),
+		'all_items' => __( 'All Announcement Categories' ),
+		'parent_item' => __( 'Parent Announcement Category' ),
+		'parent_item_colon' => __( 'Parent Announcement Category:' ),
+		'edit_item' => __( 'Edit Announcement Category' ),
+		'update_item' => __( 'Update Announcement Category' ),
+		'add_new_item' => __( 'Add New Announcement Category' ),
+		'new_item_name' => __( 'New Announcement Category Name' ),
+		'menu_name' => __( 'Announcement Category' ),
+	);
+
+	// Now register the taxonomy
+	register_taxonomy('announcement-category', array('announcement'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+        'show_in_nav_menus' => true,
+        'show_in_rest' => true,
+        'exclude_from_search' => false
+	));
+}
+add_action('init', 'sbh_announcement_category_taxonomy', 0);
 
 /***************************************************
 / ACF Blocks
